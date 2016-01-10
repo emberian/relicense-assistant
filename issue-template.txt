@@ -37,8 +37,8 @@ interoperation with the wider Rust ecosystem.
 # How?
 
 To do this, get explicit approval from each contributor of copyrightable work
-(as not all contributions qualify for copyright) and then add the following to
-your README:
+(as not all contributions qualify for copyright, due to not being a "creative
+work", e.g. a typo fix) and then add the following to your README:
 
 ```
 ## License
@@ -57,17 +57,22 @@ for inclusion in the work by you, as defined in the Apache-2.0 license, shall be
 additional terms or conditions.
 ```
 
-and in your license headers, use the following boilerplate (based on that used in Rust):
+and in your license headers, if you have them, use the following boilerplate
+(based on that used in Rust):
 
 ```
-// Copyright (c) 2016 {{project_name}} developers
+// Copyright 2016 {{project_name}} developers
 //
-// Licensed under the Apache License, Version 2.0
-// <LICENSE-APACHE or http://www.apache.org/licenses/LICENSE-2.0> or the MIT
-// license <LICENSE-MIT or http://opensource.org/licenses/MIT>, at your
-// option. All files in the project carrying such notice may not be copied,
-// modified, or distributed except according to those terms.
+// Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
+// http://www.apache.org/licenses/LICENSE-2.0> or the MIT license
+// <LICENSE-MIT or http://opensource.org/licenses/MIT>, at your
+// option. This file may not be copied, modified, or distributed
+// except according to those terms.
 ```
+
+It's commonly asked whether license headers are required. I'm not comfortable
+making an official recommendation either way, but the Apache license
+recommends it in their appendix on how to use the license.
 
 Be sure to add the relevant `LICENSE-{MIT,APACHE}` files. You can copy these
 from the [Rust](https://github.com/rust-lang/rust) repo for a plain-text
@@ -85,7 +90,7 @@ the heavy lifting to me!
 
 To agree to relicensing, comment with :
 
-    I license past and future contributions under the dual MIT/Apache-2.0 license, allowing licensees to chose either at their option
+    I license past and future contributions under the dual MIT/Apache-2.0 license, allowing licensees to chose either at their option.
 
 Or, if you're a contributor, you can check the box in this repo next to your
 name. My scripts will pick this exact phrase up and check your checkbox, but
