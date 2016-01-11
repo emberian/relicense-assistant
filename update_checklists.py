@@ -5,22 +5,17 @@ import sys
 import os
 import time
 
-from util import uri_to_repo
+from license_issue import find_issue
 
 considered_agreed = [
         "i consent",
         "i license past and future contributions under the dual mit/apache-2.0 license, allowing licensees to chose either at their option",
         "r+",
-        "i agree",
         ]
 
 
 def update(gh, repo):
-    r = uri_to_repo(gh, repo)
-    iss = None
-    for issue in r.iter_issues(since="2016-01-07T00:00:00Z"):
-        if issue.title == "Relicense under dual MIT/Apache-2.0":
-            iss = issue
+    iss = find_issue(gh, repo)
     if iss is None or iss.is_closed():
         return
     agreed = []
@@ -42,9 +37,10 @@ def update_all(gh, processed, ready_to_relicense):
             if update(gh, uri):
                 print(uri, file=ready_to_relicense)
             print("{} updated!".format(uri))
-        except e:
+        except Exception as e:
             print("Exception in {}".format(uri))
             print(e)
+        time.sleep(3)
 
 if __name__ == "__main__":
     processed = set(map(str.strip, set(open("processed.txt")))) - set(map(str.strip, set(open("ready.txt"))))

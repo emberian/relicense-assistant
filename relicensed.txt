@@ -1,0 +1,5 @@
+https://github.com/hawkw/seax
+http://github.com/codius/rust-posix-ipc
+http://github.com/tailhook/signal
+https://github.com/Byron/google-apis-rs
+https://github.com/Byron/json-tools

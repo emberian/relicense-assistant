@@ -45,7 +45,7 @@ work", e.g. a typo fix) and then add the following to your README:
 
 Licensed under either of
 
- * Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+ * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
  * MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
 
 at your option.
@@ -61,13 +61,12 @@ and in your license headers, if you have them, use the following boilerplate
 (based on that used in Rust):
 
 ```
-// Copyright 2016 {{project_name}} developers
+// Copyright 2016 {{project_name}} Developers
 //
-// Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
-// http://www.apache.org/licenses/LICENSE-2.0> or the MIT license
-// <LICENSE-MIT or http://opensource.org/licenses/MIT>, at your
-// option. This file may not be copied, modified, or distributed
-// except according to those terms.
+// Licensed under the Apache License, Version 2.0, <LICENSE-APACHE or
+// http://apache.org/licenses/LICENSE-2.0> or the MIT license <LICENSE-MIT or
+// http://opensource.org/licenses/MIT>, at your option. This file may not be
+// copied, modified, or distributed except according to those terms.
 ```
 
 It's commonly asked whether license headers are required. I'm not comfortable
@@ -80,7 +79,7 @@ version.
 
 And don't forget to update the `license` metadata in your `Cargo.toml` to:
 
-    license = "MIT/Apache-2.0"
+    license = "MIT OR Apache-2.0"
 
 I'll be going through projects which agree to be relicensed and have approval
 by the necessary contributors and doing this changes, so feel free to leave

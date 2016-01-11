@@ -1,0 +1,29 @@
+Relicense to dual MIT/Apache-2.0
+
+This pull request was automatically generated because my scripts detected that
+everyone in the [relicensing issue]({{relicense_issue}}) agreed to
+relicensing.
+
+License headers in files were not updated, if they exist. I've reproduced an
+example license header below if you want to copy-paste it in. If you don't
+have license headers, [don't feel compelled to add
+them](https://github.com/rust-lang/rust/pull/21481#issuecomment-71029250).
+
+```
+// Copyright 2016 {{project_name}} Developers
+//
+// Licensed under the Apache License, Version 2.0, <LICENSE-APACHE or
+// http://apache.org/licenses/LICENSE-2.0> or the MIT license <LICENSE-MIT or
+// http://opensource.org/licenses/MIT>, at your option. This file may not be
+// copied, modified, or distributed except according to those terms.
+```
+
+I recommend publishing a new patch version (the `z` in `x.y.z`) so that the
+metadata propagates to `crates.io`.
+
+Please be sure to check the `README.md` for style. I've try to
+review these PRs as they go out, but I might miss something.
+
+Thanks for relicensing!
+
+(For my bookkeeping: this is repository id {{repo_id}})

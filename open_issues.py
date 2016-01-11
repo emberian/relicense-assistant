@@ -21,14 +21,14 @@ for repo in repos - processed:
         if path[1].endswith(".git"):
             path[1] = path[1][:-4]
         r = gh.repository(path[0], path[1])
-        contribs = "\n".join(map(lambda u: " - [ ] @{}".format(u.login), r.iter_contributors()))
-        if "@cgaebel" in contribs or "emk" in contribs:
+        contribs = "\n".join(sorted(map(lambda u: " - [ ] @{}".format(u.login), r.iter_contributors())))
+        if "cgaebel" in contribs or "emk" in contribs:
             break
         issue_body = tpl.replace("{{project_name}}", path[1]) + "\n" + contribs
         r.create_issue("Relicense under dual MIT/Apache-2.0", body=issue_body)
         print(repo.strip(), file=p)
         print("Done {}".format(repo))
-        time.sleep(10)
+        time.sleep(30)
     except Exception as e:
         print("Some exception in {}".format(repo))
         print(e)
