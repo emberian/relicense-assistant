@@ -748,3 +748,5 @@ https://github.com/softprops/tee
 https://github.com/Terah-/rust-bytebuffer
 https://github.com/rustcc/coroutine-rs
 https://github.com/reem/rust-traitobject.git
+https://github.com/tiffany352/susurrus
+https://github.com/brayniac/histogram

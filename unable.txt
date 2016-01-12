@@ -1,0 +1,8 @@
+https://github.com/icorderi/yacli/
+https://github.com/richo/hypr.git
+https://github.com/sorear/libuv-rs
+https://github.com/sgrif/diesel
+https://github.com/botanio/sdk
+https://github.com/GGist/bittorrent-rs
+https://github.com/KalitaAlexey/unchecked_mutable
+https://github.com/GGist/redox-rs

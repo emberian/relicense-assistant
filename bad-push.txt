@@ -1,0 +1,9 @@
+https://github.com/cmr/ioctl
+https://github.com/gifnksm/SLSR
+https://github.com/rust-bridge/rust
+https://github.com/georust/geohash.rs
+https://github.com/zisten/libr.rs.git
+https://github.com/filsmick/steam-crypto-rs
+https://github.com/kstep/rust-scgi.git
+https://github.com/rphmeier/scoped_allocator
+https://github.com/PistonDevelopers/redox.git

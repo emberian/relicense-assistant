@@ -11,6 +11,7 @@ considered_agreed = [
         "i consent",
         "i license past and future contributions under the dual mit/apache-2.0 license, allowing licensees to chose either at their option",
         "r+",
+        "+1",
         ]
 
 
@@ -40,10 +41,13 @@ def update_all(gh, processed, ready_to_relicense):
         except Exception as e:
             print("Exception in {}".format(uri))
             print(e)
-        time.sleep(3)
+        time.sleep(2)
+
+def setify(fname):
+    return set(map(str.strip, set(open(fname))))
 
 if __name__ == "__main__":
-    processed = set(map(str.strip, set(open("processed.txt")))) - set(map(str.strip, set(open("ready.txt"))))
+    processed = setify("processed.txt") - setify("ready.txt") - setify("no-issue.txt")
     ready_to_relicense = open("ready.txt", "a")
     gh = github3.login(token=os.getenv("GH_API_TOKEN"))
     update_all(gh, processed, ready_to_relicense)

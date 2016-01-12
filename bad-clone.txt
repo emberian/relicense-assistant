@@ -1,0 +1,3 @@
+https://github.com/GGist/bip-rs/bip_htracker
+https://github.com/GGist/bip-rs/bip_lpd
+https://github.com/GGist/bip-rs/bip_magnet

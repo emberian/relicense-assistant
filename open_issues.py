@@ -22,7 +22,7 @@ for repo in repos - processed:
             path[1] = path[1][:-4]
         r = gh.repository(path[0], path[1])
         contribs = "\n".join(sorted(map(lambda u: " - [ ] @{}".format(u.login), r.iter_contributors())))
-        if "cgaebel" in contribs or "emk" in contribs:
+        if "cgaebel" in contribs or "emk" in contribs or "[ ]" not in contribs:
             break
         issue_body = tpl.replace("{{project_name}}", path[1]) + "\n" + contribs
         r.create_issue("Relicense under dual MIT/Apache-2.0", body=issue_body)

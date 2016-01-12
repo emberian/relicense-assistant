@@ -6,7 +6,8 @@ import os
 import time
 
 gh = github3.login(token=os.getenv("GH_API_TOKEN"))
-tpl = open("issue-template.txt").read()
+tpl = open("single-issue-template.txt").read()
+proc = open("processed.txt", "a")
 
 repo = sys.argv[1]
 
@@ -18,6 +19,7 @@ try:
     contribs = "\n".join(map(lambda u: " - [ ] @{}".format(u.login), r.iter_contributors()))
     issue_body = tpl.replace("{{project_name}}", path[1]) + "\n" + contribs
     r.create_issue("Relicense under dual MIT/Apache-2.0", body=issue_body)
+    print(repo, file=proc)
     print("Done {}".format(repo))
 except Exception as e:
     print("Some exception in {}".format(repo))
