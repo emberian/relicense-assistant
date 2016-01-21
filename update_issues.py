@@ -7,30 +7,26 @@ import time
 
 from license_issue import find_issue
 
-considered_agreed = [
-        "i consent",
-        "i license past and future contributions under the dual mit/apache-2.0 license, allowing licensees to chose either at their option",
-        "r+",
-        "+1",
-        ]
-
-
 def update(gh, repo):
     iss = find_issue(gh, repo)
     if iss is None or iss.is_closed():
         return
-    agreed = ["cmr", "homu", "gitter-badger"]
     for comment in iss.iter_comments():
-        if any(text in comment.body.lower() for text in considered_agreed):
-            agreed.append(comment.user.login)
-    new_text = iss.body
-    for u in agreed:
-        print("{} agreed".format(u))
-        new_text = new_text.replace("[ ] @{}".format(u), "[x] @{}".format(u))
-    iss.edit(body=new_text)
-    if "[ ]" in new_text:
-        return False
-    return True
+        if "f9f99cca7ae9cc3d2e16" in comment.body:
+            return
+    iss.create_comment("""
+My scripts have reported that they cannot open a relicensing pull request
+automatically for this repository. Sorry about that! There's a simple script
+here that you could use:
+
+https://gist.github.com/kstep/f9f99cca7ae9cc3d2e16
+
+Though be sure to change "The Rust Project Developers" to the appropriate text
+in LICENSE-MIT.
+
+Alternatively, I can create the PR manually. Either works for me, just let me
+know!
+""")
 
 def update_all(gh, processed, ready_to_relicense):
     for uri in processed:
@@ -47,7 +43,7 @@ def setify(fname):
     return set(map(str.strip, set(open(fname))))
 
 if __name__ == "__main__":
-    processed = setify("processed.txt") - setify("ready.txt") - setify("no-issue.txt")
-    ready_to_relicense = open("ready.txt", "a")
+    processed = (setify("bad-pr.txt") | setify("bad-push.txt")) - setify("issue-about-bad.txt")
+    ready_to_relicense = open("issue-about-bad.txt", "a")
     gh = github3.login(token=os.getenv("GH_API_TOKEN"))
     update_all(gh, processed, ready_to_relicense)

@@ -19,3 +19,7 @@ https://github.com/m-decoster/RsGenetic
 https://github.com/nathankleyn/gitignore.rs
 https://github.com/PistonDevelopers/geometry.git
 https://github.com/samdolt/subcmd-rs/
+https://github.com/seanmonstar/l20n.rs
+https://github.com/reem/rust-lazy
+https://github.com/frewsxcv/rust-two-three
+https://github.com/forgemo/summed_area_table

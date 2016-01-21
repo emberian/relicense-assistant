@@ -7,3 +7,5 @@ https://github.com/filsmick/steam-crypto-rs
 https://github.com/kstep/rust-scgi.git
 https://github.com/rphmeier/scoped_allocator
 https://github.com/PistonDevelopers/redox.git
+https://github.com/reem/rust-lazy
+https://github.com/forgemo/summed_area_table

@@ -20,6 +20,7 @@ if [ $status == 2 -o $status == 1 ]; then
 fi
 git clone --depth 1 $1 $dir_name || (echo $crate_uri >> bad-clone.txt && exit)
 
+echo $dir_name >> .gitignore
 pushd $dir_name
 if grep -q "Temporary Redirect" <(hub fork); then
     echo $crate_uri >> ../bad-fork.txt

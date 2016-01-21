@@ -168,3 +168,16 @@ https://github.com/gekkio/imgui-rs
 https://github.com/PistonDevelopers/geometry.git
 https://github.com/samdolt/subcmd-rs/
 https://github.com/PistonDevelopers/quaternion.git
+https://github.com/seanmonstar/l20n.rs
+https://github.com/reem/rust-lazy
+https://github.com/adamgreig/hackrf-rs
+https://github.com/GrahamDennis/quickercheck
+https://github.com/hjr3/hal-rs
+https://github.com/mrfloya/pam-auth
+https://github.com/awelkie/cobs.rs
+https://github.com/awelkie/RustFFT
+https://github.com/DenisKolodin/static-server
+https://github.com/frewsxcv/rust-two-three
+https://github.com/forgemo/summed_area_table
+https://github.com/reem/rust-unreachable.git
+https://github.com/insanitybit/gsblookup-rs
