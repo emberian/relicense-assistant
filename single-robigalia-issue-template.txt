@@ -1,4 +1,5 @@
-The project maintainer explicitly agreed to have this issue opened.
+Hello. I'd like to use this crate in [Robigalia](https://robigalia.org).
+However, for that, 
 
 TL;DR the Rust ecosystem is largely Apache-2.0. Being available under that
 license is good for interoperation. The MIT license as an add-on can be nice
