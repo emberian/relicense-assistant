@@ -8,10 +8,8 @@ import time
 from license_issue import find_issue
 
 considered_agreed = [
-        "i consent",
         "i license past and future contributions under the dual mit/apache-2.0 license, allowing licensees to chose either at their option",
         "r+",
-        "+1",
         ]
 
 
